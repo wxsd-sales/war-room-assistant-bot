@@ -1,0 +1,20 @@
+{
+  "name": "hannabot",
+  "version": "1.0.0",
+  "description": "Hanna Bot",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "@webex/internal-plugin-mercury": "^2.11.1",
+    "axios": "^0.27.2",
+    "dotenv": "^8.2.0",
+    "mongodb": "^4.1.2",
+    "webex": "^1.141.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1"
+  }
+}

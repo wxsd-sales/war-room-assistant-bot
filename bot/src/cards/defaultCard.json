@@ -1,0 +1,133 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "Image",
+              "size": "Small",
+              "url": "https://avatars.githubusercontent.com/u/79668990?s=400&u=7a159fa30994319d5ad84189de6cdcb05311094d&v=4"
+            }
+          ],
+          "width": "auto"
+        },
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "weight": "Bolder",
+              "wrap": true,
+              "text": "Hanna"
+            },
+            {
+              "type": "TextBlock",
+              "spacing": "None",
+              "text": "War Room Assistant Bot",
+              "isSubtle": true,
+              "wrap": true
+            }
+          ],
+          "width": "stretch"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "Hi! I'm Hanna, a war room assistant bot designed to help you with incident response workflows! Please enter an Incident ID in the field below and select the teams you'd like me to rally! I'll create a separate space with the team as soon as you hit the Go! button below.\n",
+      "wrap": true
+    },
+    {
+      "type": "Container",
+      "minHeight": "0px",
+      "separator": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "Incident ID:",
+      "wrap": true
+    },
+    {
+      "type": "Input.Text",
+      "id": "incident_id",
+      "spacing": "None"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Select Scenario:",
+      "wrap": true
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "placeholder": "--select--",
+      "spacing": "None",
+      "id": "scenario_type"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Notes:",
+      "wrap": true
+    },
+    {
+      "type": "Input.Text",
+      "placeholder": "Please enter any additional message.",
+      "isMultiline": true,
+      "spacing": "None",
+      "id": "notes"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Warning: This is the default card. You can customize your bot by clicking on customize button below",
+      "wrap": true,
+      "color": "Attention"
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "ActionSet",
+              "actions": [
+                {
+                  "type": "Action.OpenUrl",
+                  "title": "Customize",
+                  "url": "https://hanna.wbx.ninja/"
+                }
+              ],
+              "horizontalAlignment": "Right"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "ActionSet",
+              "actions": [
+                {
+                  "type": "Action.Submit",
+                  "title": "Submit!",
+                  "id": "submit",
+                  "data": {
+                    "submit": "main"
+                  }
+                }
+              ],
+              "horizontalAlignment": "Left"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.2"
+}
