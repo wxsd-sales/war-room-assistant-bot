@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.service.group: hanna-webpage
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: hanna-webpage
+  name: hanna-webpage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: hanna-webpage
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.service.group: hanna-webpage
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: hanna-webpage
+    spec:
+      containers:
+        - image: 191518685251.dkr.ecr.us-west-1.amazonaws.com/hanna-webpage
+          name: hanna-webpage
+          ports:
+            - containerPort: 3000
+          resources: {}
+      restartPolicy: Always
+status: {}
